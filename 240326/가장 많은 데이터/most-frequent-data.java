@@ -10,7 +10,7 @@ public class Main {
 
         HashMap<String, Integer> hm = new HashMap<>();
 
-        int max = -1;
+        int max = 0;
         for(int i = 0; i < n; i++){
             String key = br.readLine();
             if(hm.containsKey(key)){
@@ -20,6 +20,7 @@ public class Main {
             }
             else{
                 hm.put(key, 1);
+                max = Math.max(max, hm.get(key));
             }
 
         }
